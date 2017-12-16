@@ -2,4 +2,3 @@
 ・Microsoft Flow トリガ
 ・Functions ぐるなびAPI
 ・Teamsに投稿
-
