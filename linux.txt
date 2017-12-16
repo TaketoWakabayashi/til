@@ -1,0 +1,74 @@
+﻿#日本語化
+sudo wget -q https://www.ubuntulinux.jp/ubuntu-ja-archive-keyring.gpg -O- | sudo apt-key add -
+sudo wget -q https://www.ubuntulinux.jp/ubuntu-jp-ppa-keyring.gpg -O- | sudo apt-key add -
+sudo wget https://www.ubuntulinux.jp/sources.list.d/wily.list -O /etc/apt/sources.list.d/ubuntu-ja.list
+
+wget -q https://www.ubuntulinux.jp/ubuntu-ja-archive-keyring.gpg -O- | sudo apt-key add -
+wget -q https://www.ubuntulinux.jp/ubuntu-jp-ppa-keyring.gpg -O- | sudo apt-key add -
+sudo wget https://www.ubuntulinux.jp/sources.list.d/xenial.list -O /etc/apt/sources.list.d/ubuntu-ja.list
+sudo apt-get update
+
+sudo apt-get update<br>sudo apt-get upgrade -y
+sudo apt-get install -y ubuntu-defaults-ja
+sudo reboot
+
+sudo update-locale LANG=ja_JP.UTF-8 LANGUAGE="ja_JP:ja"
+source /etc/default/locale
+
+echo $LANG
+
+timedatectl
+timedatectl set-timezone Asia/Tokyo 
+
+
+cat /etc/lsb-release
+sudo cat /etc/sudoers
+
+#xrdp
+sudo apt-get install -y xrdp
+
+cd /etc/xrdp
+sudo wget http://www.mail-archive.com/xrdp-devel@lists.sourceforge.net/msg00263/km-e0010411.ini
+sudo cp km-e0010411.ini km-0411.ini
+sudo cp km-e0010411.ini km-e0200411.ini
+sudo cp km-e0010411.ini km-e0210411.ini
+
+echo lxsession -s LXDE -e LXDE > ~/.xsession
+sudo service xrdp restart
+
+service xrdp status
+
+#FW
+sudo ufw enable
+sudo ufw allow ssh
+sudo ufw allow 3389/tcp
+sudo ufw reload
+sudo ufw status verbose
+#hosts追記
+sudo sh -c 'echo 127.0.1.1 WPECHB-Certget >> /etc/hosts'
+sudo cat /etc/hosts
+
+#DNS
+cat /etc/resolv.conf 
+
+#参考
+https://www.ubuntulinux.jp/japanese
+http://d.hatena.ne.jp/hilapon/20160415/1460711501
+http://kogelog.com/2016/03/05/20160305-01/
+
+
+証明書発行
+cd /opt/letsencrypt/
+
+./certbot-auto -manual -d adfs.wpec.xyz -d enterpriseregistration.wpec.xyz
+cd /etc/letsencrypt/live/adfs.wpec.xyz/
+openssl pkcs12 -export -in fullchain.pem -inkey privkey.pem -out adfs.pfx
+
+./certbot-auto -manual -d access.wpec.xyz -d webcon.wpec.xyz -d av.wpec.xyz
+cd /etc/letsencrypt/live/access.wpec.xyz/
+openssl pkcs12 -export -in fullchain.pem -inkey privkey.pem -out lync.pfx
+
+./certbot-auto -manual -d lsrp.wpec.xyz -d lsrp.wpec.xyz -d dialin.wpec.xyz -d meet.wpec.xyz -d lyncdiscover.wpec.xyz
+cd /etc/letsencrypt/live/lsrp.wpec.xyz/
+openssl pkcs12 -export -in fullchain.pem -inkey privkey.pem -out lsrp.pfx
+
