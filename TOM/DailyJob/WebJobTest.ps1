@@ -1,6 +1,6 @@
 ﻿# Load the SharePoint 2013 .NET Framework Client Object Model libraries. 
-Add-Type –Path "Microsoft.SharePoint.Client.dll" 
-Add-Type –Path "Microsoft.SharePoint.Client.Runtime.dll"
+Add-Type –Path "$PSScriptRoot\Modules\Microsoft.SharePoint.Client.dll" 
+Add-Type –Path "$PSScriptRoot\Modules\Microsoft.SharePoint.Client.Runtime.dll"
 
 # Authenticate with the SharePoint Online site. 
 $siteUrl = “https://pwcmsj.sharepoint.com/sites/TOM-TW”
