@@ -21,7 +21,7 @@ $connectionString = "Provider = Microsoft.ACE.OLEDB.12.0; Data Source = $path"
 $con.Open($connectionString)
 
 # レコードセットをオープン
-$rs.Open("SELECT * FROM [AddressList(CSV)]", $con, $adOpenStatic, $adLockOptimistic) 
+$rs.Open("SELECT * FROM [【AddressList】SelectInsertRecords]", $con, $adOpenStatic, $adLockOptimistic) 
 
 # 先頭行に移動
 $rs.MoveFirst()
@@ -41,6 +41,6 @@ $rs.Close()
 # 接続を閉じる
 $con.Close()
 
-# COM オブジェクトをリリース(Excelと違ってなくても問題ないけど一応)
+# COM オブジェクトをリリース
 [void][System.Runtime.InteropServices.Marshal]::ReleaseComObject($rs)
 [void][System.Runtime.InteropServices.Marshal]::ReleaseComObject($con)
