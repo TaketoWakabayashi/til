@@ -3,8 +3,8 @@ $siteURL = "https://pwcmsj.sharepoint.com/sites/TOM-TW/"
 #$outfilename = "$PSScriptRoot\Output\SPGroupList.txt"
 
 # Load the SharePoint .NET Framework Client Object Model libraries. 
-Add-Type –Path "$PSScriptRoot\Modules\Microsoft.SharePoint.Client.dll" 
-Add-Type –Path "$PSScriptRoot\Modules\Microsoft.SharePoint.Client.Runtime.dll"
+Add-Type –Path "Microsoft.SharePoint.Client.dll" 
+Add-Type –Path "Microsoft.SharePoint.Client.Runtime.dll"
 
 $ctx = New-Object Microsoft.SharePoint.Client.ClientContext($siteURL)
 
