@@ -1,0 +1,20 @@
+SPGroup	GroupOwner	Title	ID	Email	LoginName
+Style Resource Readers	TOM v2 Owners	Everyone	4		c:0(.s|true
+Style Resource Readers	TOM v2 Owners	NT AUTHORITY\authenticated users	19		c:0!.s|windows
+TOM Administrators	System Account	administrator	1		i:0#.w|tomdemo\administrator
+TOM Administrators	System Account	web adm	22		i:0#.w|tomdemo\webadm
+TOM Members	System Account	administrator	1		i:0#.w|tomdemo\administrator
+TOM Members	System Account	TOM DEMO01	23		i:0#.w|tomdemo\tomdemo01
+TOM Members	System Account	TOM DEMO02	24		i:0#.w|tomdemo\tomdemo02
+TOM Members	System Account	TOM DEMO03	25		i:0#.w|tomdemo\tomdemo03
+TOM Members	System Account	web adm	22		i:0#.w|tomdemo\webadm
+TOM Members	System Account	中原　拓也	32		i:0#.w|tomdemo\takuya.nakahara
+TOM Members	System Account	佐藤　次郎	36		i:0#.w|tomdemo\jiro.sato
+TOM Members	System Account	南　繁樹	31		i:0#.w|tomdemo\shigeki.minami
+TOM Members	System Account	山田　太郎	26		i:0#.w|tomdemo\taro.yamada
+TOM Members	System Account	深見　哲	30		i:0#.w|tomdemo\akira.fukami
+TOM Members	System Account	田中　一郎	35		i:0#.w|tomdemo\ichiro.tanaka
+TOM Members	System Account	鈴木　三郎	37		i:0#.w|tomdemo\saburo.suzuki
+TOM Members	System Account	高島　淳	33		i:0#.w|tomdemo\jun.takashima
+TOM v2 Owners	TOM v2 Owners	administrator	1		i:0#.w|tomdemo\administrator
+TOM v2 Owners	TOM v2 Owners	SPS2013\administrator	2		i:0#.w|sps2013\administrator
