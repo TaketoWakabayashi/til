@@ -2,7 +2,6 @@
 #  PowerShell から ADO でレコードを読み込む
 #
 
-
 # 変数の宣言
 $adOpenStatic = 3
 $adLockOptimistic = 3
@@ -30,8 +29,8 @@ $rs.MoveFirst()
 # レコードセットの最後までループ
 While ($rs.EOF -eq $false) {
    # フィールドの値を連結して出力
-   Write-Host $rs.Fields.Item("表示名").Value : $rs.Fields.Item("プライマリ メールアドレス").Value 
-   
+   Write-Host $rs.Fields.Item("表示名").Value
+ 
    # 次のレコードに移動する
    $rs.MoveNext()
 }
