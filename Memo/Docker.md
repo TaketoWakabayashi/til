@@ -1,15 +1,21 @@
-﻿■Dockerについて
-
+﻿# Dockerについて
+```powershell
 docker pull ubuntu:16.04
 docker run -it ubuntu:16.04
 
 apt-get update
-#Python3 のインストール
+```
+# Python3 のインストール
+```bash
 apt-get install -y python3 python3-pip
-#MySQL のインストール
+```
+# MySQL のインストール
+```bash
 apt-get install -y mysql-server
+```
 
-#MySQL Client のインストール
+# MySQL Client のインストール
+```
 apt-get install -y libmysqlclient-dev
 pip3 install mysqlclient
 
@@ -27,3 +33,4 @@ service mysql start
 service --status-all
 
 export LC_ALL=C
+```
