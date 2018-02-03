@@ -1,4 +1,0 @@
-・Exchange Online 予定表
-・Microsoft Flow トリガ
-・Functions ぐるなびAPI
-・Teamsに投稿
