@@ -32,3 +32,5 @@ function hello1() {
 function hello2() {
     console.log('Hello sync2');
 }
+
+hello2()
