@@ -1,0 +1,12 @@
+{
+  "$schema": "https://dev.office.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "image-analyzer-client-side-solution",
+    "id": "f8274726-4906-4305-a538-350f576a4d73",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true
+  },
+  "paths": {
+    "zippedPackage": "solution/image-analyzer.sppkg"
+  }
+}

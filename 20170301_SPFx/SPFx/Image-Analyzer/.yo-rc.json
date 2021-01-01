@@ -1,0 +1,8 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "version": "1.4.1",
+    "libraryName": "image-analyzer",
+    "libraryId": "f8274726-4906-4305-a538-350f576a4d73",
+    "environment": "spo"
+  }
+}

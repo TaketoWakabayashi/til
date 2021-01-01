@@ -1,0 +1,18 @@
+{
+  "$schema": "https://dev.office.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "image-analyzer-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/imageAnalyzer/ImageAnalyzerWebPart.js",
+          "manifest": "./src/webparts/imageAnalyzer/ImageAnalyzerWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "ImageAnalyzerWebPartStrings": "lib/webparts/imageAnalyzer/loc/{locale}.js"
+  }
+}
