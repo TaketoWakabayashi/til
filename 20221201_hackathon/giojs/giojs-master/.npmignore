@@ -1,0 +1,13 @@
+#IDE settings
+.idea
+
+#test
+test
+
+#sensitive for now
+assets
+examples
+src
+.babelrc
+.travis.yml
+rollup.config.js

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>My first three.js app</title>
+    <style>
+        body {
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <script src="js/three.js"></script>
+    <script>
+        const renderer = new THREE.WebGLRenderer();
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        document.body.appendChild(renderer.domElement);
+
+        const camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 1, 500);
+        camera.position.set(0, 0, 100);
+        camera.lookAt(0, 0, 0);
+
+        const scene = new THREE.Scene();
+
+        //create a blue LineBasicMaterial
+        const material = new THREE.LineBasicMaterial({ color: 0xffffff });
+
+        const pointNum = 30;
+        let line;
+        let start = 0, count = 2;
+
+        createLine();
+        renderScene();
+
+        //*****************************************
+        // 線を作成
+        //*****************************************
+        function createLine() {
+            const points = [];
+            for (let i = 0; i < pointNum; i++) {
+                const x = i;
+
+                const rad = degToRad(360 / pointNum * i);
+                const y = 5 * Math.sin(rad);
+
+                const z = 0;
+                const p = new THREE.Vector3(x, y, z);
+                points.push(p);
+            }
+            const geo = new THREE.BufferGeometry().setFromPoints(points);
+            const mat = new THREE.LineBasicMaterial({ color: 0xffff00 });
+            line = new THREE.Line(geo, mat);
+            scene.add(line);
+        }
+
+        //*****************************************
+        // 線を動かす
+        //*****************************************
+        function moveLine() {
+            line.geometry.setDrawRange(start, count);
+
+            count += 1;
+            if (count > pointNum / 2) {
+                start += 1;
+            }
+            if (start > pointNum) {
+                count = 2;
+                start = 0;
+            }
+        }
+
+        //*****************************************
+        // 度→ラジアン
+        //*****************************************
+        function degToRad(deg) {
+            return deg * Math.PI / 180;
+        }
+
+        //*****************************************
+        // 描画
+        //*****************************************
+        function renderScene() {
+            moveLine();
+            requestAnimationFrame(renderScene);
+            renderer.render(scene, camera);
+        }
+    </script>
+</body>
+
+</html>
