@@ -1,0 +1,28 @@
+Started GET "/" for 127.0.0.1 at 2023-02-02 18:32:02 +0900
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/taketo.wakabayashi/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/taketo.wakabayashi/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.9ms | Allocations: 618)
+Completed 200 OK in 6ms (Views: 3.8ms | Allocations: 3410)
+
+
+Started GET "/" for 127.0.0.1 at 2023-02-03 11:08:55 +0900
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/taketo.wakabayashi/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/taketo.wakabayashi/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.9ms | Allocations: 509)
+Completed 200 OK in 4ms (Views: 2.0ms | Allocations: 2501)
+
+
+Started GET "/" for 127.0.0.1 at 2023-02-03 11:11:19 +0900
+Processing by ApplicationController#hello as HTML
+  Rendering html template
+  Rendered html template (Duration: 0.0ms | Allocations: 20)
+Completed 200 OK in 2ms (Views: 1.9ms | Allocations: 1281)
+
+
+Started GET "/" for 127.0.0.1 at 2023-02-03 11:13:32 +0900
+Processing by ApplicationController#goodbye as HTML
+  Rendering html template
+  Rendered html template (Duration: 0.0ms | Allocations: 20)
+Completed 200 OK in 1ms (Views: 1.2ms | Allocations: 1213)
+
+

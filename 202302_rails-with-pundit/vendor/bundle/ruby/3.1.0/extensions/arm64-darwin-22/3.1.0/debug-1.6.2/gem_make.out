@@ -1,0 +1,16 @@
+current directory: /Users/taketo.wakabayashi/Workspace/repo/til/202301_rails-with-pundit/vendor/bundle/ruby/3.1.0/gems/debug-1.6.2/ext/debug
+/Users/taketo.wakabayashi/.rbenv/versions/3.1.2/bin/ruby -I /Users/taketo.wakabayashi/.rbenv/versions/3.1.2/lib/ruby/3.1.0 -r ./siteconf20230131-39344-zbkrsk.rb extconf.rb
+creating Makefile
+
+current directory: /Users/taketo.wakabayashi/Workspace/repo/til/202301_rails-with-pundit/vendor/bundle/ruby/3.1.0/gems/debug-1.6.2/ext/debug
+make DESTDIR\= clean
+
+current directory: /Users/taketo.wakabayashi/Workspace/repo/til/202301_rails-with-pundit/vendor/bundle/ruby/3.1.0/gems/debug-1.6.2/ext/debug
+make DESTDIR\=
+compiling debug.c
+compiling iseq_collector.c
+linking shared-object debug/debug.bundle
+
+current directory: /Users/taketo.wakabayashi/Workspace/repo/til/202301_rails-with-pundit/vendor/bundle/ruby/3.1.0/gems/debug-1.6.2/ext/debug
+make DESTDIR\= install
+/usr/bin/install -c -m 0755 debug.bundle ./.gem.20230131-39344-6358xn/debug

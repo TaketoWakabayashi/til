@@ -1,0 +1,19 @@
+current directory: /Users/taketo.wakabayashi/Workspace/repo/til/202301_rails-with-pundit/vendor/bundle/ruby/3.1.0/gems/binding_ninja-0.2.3/ext/binding_ninja
+/Users/taketo.wakabayashi/.rbenv/versions/3.1.2/bin/ruby -I /Users/taketo.wakabayashi/.rbenv/versions/3.1.2/lib/ruby/3.1.0 -r ./siteconf20230131-39344-spebr0.rb extconf.rb
+creating Makefile
+
+current directory: /Users/taketo.wakabayashi/Workspace/repo/til/202301_rails-with-pundit/vendor/bundle/ruby/3.1.0/gems/binding_ninja-0.2.3/ext/binding_ninja
+make DESTDIR\= clean
+
+current directory: /Users/taketo.wakabayashi/Workspace/repo/til/202301_rails-with-pundit/vendor/bundle/ruby/3.1.0/gems/binding_ninja-0.2.3/ext/binding_ninja
+make DESTDIR\=
+compiling binding_ninja.c
+binding_ninja.c:77:21: warning: unused variable 'ext_mod' [-Wunused-variable]
+  VALUE method_sym, ext_mod, options, binding, args_ary, cond;
+                    ^
+1 warning generated.
+linking shared-object binding_ninja/binding_ninja.bundle
+
+current directory: /Users/taketo.wakabayashi/Workspace/repo/til/202301_rails-with-pundit/vendor/bundle/ruby/3.1.0/gems/binding_ninja-0.2.3/ext/binding_ninja
+make DESTDIR\= install
+/usr/bin/install -c -m 0755 binding_ninja.bundle ./.gem.20230131-39344-dwca2h/binding_ninja
